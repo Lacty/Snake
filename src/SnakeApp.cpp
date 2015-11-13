@@ -1,12 +1,20 @@
 
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
+
+#include "WindowSize.hpp"
+
 #include "Input.hpp"
+#include "Game.hpp"
 
 using namespace ci;
 using namespace ci::app;
 
 class SnakeApp : public AppNative {
+private:
+  Game game;
+  Vec3f pos;
+  
 public:
   void setup();
   void mouseDown(MouseEvent event);
@@ -16,6 +24,7 @@ public:
 };
 
 void SnakeApp::setup() {
+  setWindowSize(Width, Height);
   Input::get();
 }
 
@@ -25,10 +34,15 @@ void SnakeApp::keyDown(KeyEvent event) {
   Input::get().setKeyPush(event.getChar());
 }
 
-void SnakeApp::update() {}
+void SnakeApp::update() {
+  game.update();
+}
 
 void SnakeApp::draw() {
-	gl::clear(Color(0, 0, 0));
+	gl::clear(Color(0.4f, 0.4f, 0.4f));
+  
+  game.draw();
+  
   Input::get().reset();
 }
 

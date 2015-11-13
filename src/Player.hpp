@@ -1,0 +1,40 @@
+
+#pragma once
+#include <vector>
+#include "WindowSize.hpp"
+#include "CellSize.hpp"
+#include "cinder/Vector.h"
+
+
+enum Direction {
+  Up,
+  Down,
+  Right,
+  Left
+};
+
+class Player {
+private:
+  ci::Vec2i cell_size;
+  
+  Direction head_dir;
+  
+  ci::Vec2i size;
+  ci::Vec2i offset;
+  
+  struct Body {
+    ci::Vec2i pos;
+    Direction dir;
+    Body(const ci::Vec2i& pos,
+         const Direction& dir);
+  };
+  std::vector<Body> bodies;
+  
+  void advanceInDirection(ci::Vec2i& pos, Direction dir);
+  
+public:
+  Player();
+  
+  void update();
+  void draw();
+};

@@ -16,8 +16,9 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		AC31702E1BF603D7001F589B /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC31702C1BF603D7001F589B /* Map.cpp */; };
 		AC3170311BF6045C001F589B /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC31702F1BF6045C001F589B /* Input.cpp */; };
+		AC3170341BF60F75001F589B /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170321BF60F75001F589B /* Game.cpp */; };
+		AC3170371BF610D0001F589B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170351BF610D0001F589B /* Player.cpp */; };
 		F951ED383789491BB0207035 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A6232444D1A41C9AE9D7AB8 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +37,14 @@
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		57AB9563CD24423E8A58BD34 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC31702C1BF603D7001F589B /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = ../src/Map.cpp; sourceTree = "<group>"; };
-		AC31702D1BF603D7001F589B /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Map.hpp; path = ../src/Map.hpp; sourceTree = "<group>"; };
 		AC31702F1BF6045C001F589B /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = ../src/Input.cpp; sourceTree = "<group>"; };
 		AC3170301BF6045C001F589B /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Input.hpp; path = ../src/Input.hpp; sourceTree = "<group>"; };
+		AC3170321BF60F75001F589B /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../src/Game.cpp; sourceTree = "<group>"; };
+		AC3170331BF60F75001F589B /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Game.hpp; path = ../src/Game.hpp; sourceTree = "<group>"; };
+		AC3170351BF610D0001F589B /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../src/Player.cpp; sourceTree = "<group>"; };
+		AC3170361BF610D0001F589B /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Player.hpp; path = ../src/Player.hpp; sourceTree = "<group>"; };
+		AC3170391BF6117C001F589B /* WindowSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WindowSize.hpp; path = ../src/WindowSize.hpp; sourceTree = "<group>"; };
+		AC31703D1BF619BE001F589B /* CellSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CellSize.hpp; path = ../src/CellSize.hpp; sourceTree = "<group>"; };
 		C4FE7C93B0284804ABC67E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB52C5C237A8479E8C021814 /* Snake_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Snake_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,10 +79,14 @@
 			isa = PBXGroup;
 			children = (
 				4B468493FFEE438DB43686DF /* SnakeApp.cpp */,
-				AC31702C1BF603D7001F589B /* Map.cpp */,
-				AC31702D1BF603D7001F589B /* Map.hpp */,
 				AC31702F1BF6045C001F589B /* Input.cpp */,
 				AC3170301BF6045C001F589B /* Input.hpp */,
+				AC3170321BF60F75001F589B /* Game.cpp */,
+				AC3170331BF60F75001F589B /* Game.hpp */,
+				AC3170351BF610D0001F589B /* Player.cpp */,
+				AC3170361BF610D0001F589B /* Player.hpp */,
+				AC3170391BF6117C001F589B /* WindowSize.hpp */,
+				AC31703D1BF619BE001F589B /* CellSize.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -218,8 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3170311BF6045C001F589B /* Input.cpp in Sources */,
-				AC31702E1BF603D7001F589B /* Map.cpp in Sources */,
 				09EE1B43B153406496B91712 /* SnakeApp.cpp in Sources */,
+				AC3170341BF60F75001F589B /* Game.cpp in Sources */,
+				AC3170371BF610D0001F589B /* Player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

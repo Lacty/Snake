@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1F11D1B1B206876979A1D3063ED2155723BA6454",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4" : 0,
+    "1F11D1B1B206876979A1D3063ED2155723BA6454" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6EA146FC-2423-4E19-9171-CD158E28F926",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4" : "",
+    "1F11D1B1B206876979A1D3063ED2155723BA6454" : "Snake\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Snake",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "xcode\/Snake.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lacty\/Snake.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1F11D1B1B206876979A1D3063ED2155723BA6454"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lacty\/Cinder-Sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4"
+    }
+  ]
+}
