@@ -5,10 +5,15 @@
 
 class Game {
 private:
+  int fps;
+  
   Player player;
   
+  void updateHeadDirection();
+  
 public:
-  Game();
+  Game() = default;
+  Game(int fps);
   
   void update();
   void draw();

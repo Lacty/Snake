@@ -31,9 +31,13 @@ private:
   std::vector<Body> bodies;
   
   void advanceInDirection(ci::Vec2i& pos, Direction dir);
+  void swapDirection(Direction& dir1, Direction& dir2);
   
 public:
   Player();
+  
+  void setHeadDirection(const Direction& dir);
+  const Direction& getHeadDirection() const;
   
   void update();
   void draw();

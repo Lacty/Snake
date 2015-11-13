@@ -2,6 +2,8 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
+#include <memory>
+
 #include "WindowSize.hpp"
 
 #include "Input.hpp"
@@ -26,6 +28,8 @@ public:
 void SnakeApp::setup() {
   setWindowSize(Width, Height);
   Input::get();
+  
+  game = Game(10);
 }
 
 void SnakeApp::mouseDown(MouseEvent event) {}
