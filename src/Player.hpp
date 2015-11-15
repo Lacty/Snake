@@ -34,6 +34,8 @@ private:
   void swapDirection(Direction& dir1, Direction& dir2);
   void swapPosition(ci::Vec2i& pos1, ci::Vec2i& pos2);
   
+  void warp();
+  
 public:
   Player();
   

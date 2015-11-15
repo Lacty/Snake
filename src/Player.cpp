@@ -57,6 +57,24 @@ void Player::swapPosition(ci::Vec2i &pos1, ci::Vec2i &pos2) {
   pos2 = pos;
 }
 
+void Player::warp() {
+  static auto body_itr = bodies.begin();
+  if (body_itr->pos.x < 0) {
+    body_itr->pos.x = Row - 1;
+  }
+  else if (body_itr->pos.x >= Row) {
+    body_itr->pos.x = 0;
+  }
+  
+  if (body_itr->pos.y < 0) {
+    body_itr->pos.y = Column - 1;
+  }
+  else if (body_itr->pos.y >= Column) {
+    body_itr->pos.y = 0;
+  }
+}
+
+
 void Player::setHeadDirection(const Direction &dir) {
   head_dir = dir;
 }
@@ -71,9 +89,6 @@ const Direction& Player::getHeadDirection() const {
 }
 
 void Player::update() {
-  //static Direction current_dir;
-  //static Direction next_dir;
-  
   static ci::Vec2i current_pos;
   static ci::Vec2i next_pos;
   
@@ -82,6 +97,7 @@ void Player::update() {
       current_pos = itr->pos;
       itr->dir = head_dir;
       advanceInDirection(itr->pos, itr->dir);
+      warp();
     }
     else {
       swapPosition(current_pos, next_pos);
@@ -90,25 +106,6 @@ void Player::update() {
     }
   }
 }
-
-/*void temp() {
-  static Direction current_dir;
-  static Direction next_dir;
-  for (auto itr = bodies.begin(); itr != bodies.end(); itr++) {
-    if (itr == bodies.begin()) {
-      current_dir = itr->dir;
-      itr->dir = head_dir;
-      advanceInDirection(itr->pos, itr->dir);
-    }
-    else {
-      swapDirection(current_dir, next_dir);
-      current_dir = itr->dir;
-      itr->dir = next_dir;
-      advanceInDirection(itr->pos, itr->dir);
-    }
-  }
-}
-*/
 
 void Player::draw() {
   using namespace ci;
