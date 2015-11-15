@@ -6,7 +6,6 @@
 class Game {
 private:
   int fps;
-  bool isSelectDirection;
   Player player;
   
   void updateHeadDirection();

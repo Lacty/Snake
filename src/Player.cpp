@@ -61,6 +61,11 @@ void Player::setHeadDirection(const Direction &dir) {
   head_dir = dir;
 }
 
+const bool Player::isConfiguredDirection() const {
+  static auto body_itr = bodies.begin();
+  return head_dir != body_itr->dir;
+}
+
 const Direction& Player::getHeadDirection() const {
   return head_dir;
 }

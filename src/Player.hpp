@@ -38,6 +38,7 @@ public:
   Player();
   
   void setHeadDirection(const Direction& dir);
+  const bool isConfiguredDirection() const;
   const Direction& getHeadDirection() const;
   
   void update();

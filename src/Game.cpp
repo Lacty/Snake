@@ -4,8 +4,7 @@
 
 
 Game::Game(int fps) :
-fps(fps),
-isSelectDirection(false) {}
+fps(fps) {}
 
 
 void Game::updateHeadDirection() {
@@ -24,7 +23,7 @@ void Game::updateHeadDirection() {
 }
 
 void Game::update() {
-  if (!isSelectDirection) {
+  if (!player.isConfiguredDirection()) {
     updateHeadDirection();
   }
   static int Fps = 0;
