@@ -4,7 +4,8 @@
 
 
 Game::Game(int fps) :
-fps(fps) {}
+fps(fps),
+isSelectDirection(false) {}
 
 
 void Game::updateHeadDirection() {
@@ -23,7 +24,9 @@ void Game::updateHeadDirection() {
 }
 
 void Game::update() {
-  updateHeadDirection();
+  if (!isSelectDirection) {
+    updateHeadDirection();
+  }
   static int Fps = 0;
   Fps++;
   if (Fps > fps) {
