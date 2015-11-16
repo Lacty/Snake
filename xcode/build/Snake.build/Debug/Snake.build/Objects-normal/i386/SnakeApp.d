@@ -4,4 +4,6 @@ dependencies: /Users/yanai/Desktop/CinderProj/Snake/src/SnakeApp.cpp \
   /Users/yanai/Desktop/CinderProj/Snake/src/Input.hpp \
   /Users/yanai/Desktop/CinderProj/Snake/src/Game.hpp \
   /Users/yanai/Desktop/CinderProj/Snake/src/Player.hpp \
-  /Users/yanai/Desktop/CinderProj/Snake/src/CellSize.hpp
+  /Users/yanai/Desktop/CinderProj/Snake/src/CellSize.hpp \
+  /Users/yanai/Desktop/CinderProj/Snake/src/Map.hpp \
+  /Users/yanai/Desktop/CinderProj/Snake/src/Item.hpp

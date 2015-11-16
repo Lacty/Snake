@@ -19,6 +19,12 @@ private:
   
 public:
   void setup();
+  
+  void prepareSettings(Settings* settings) {
+    // １秒あたりの画面更新回数制限を禁止する
+    settings->disableFrameRate();
+  }
+  
   void mouseDown(MouseEvent event);
   void keyDown(KeyEvent event);
   void update();
@@ -29,7 +35,7 @@ void SnakeApp::setup() {
   setWindowSize(Width, Height);
   Input::get();
   
-  game = Game(10);
+  game = Game(8);
 }
 
 void SnakeApp::mouseDown(MouseEvent event) {}

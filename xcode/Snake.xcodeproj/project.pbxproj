@@ -19,6 +19,7 @@
 		AC3170311BF6045C001F589B /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC31702F1BF6045C001F589B /* Input.cpp */; };
 		AC3170341BF60F75001F589B /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170321BF60F75001F589B /* Game.cpp */; };
 		AC3170371BF610D0001F589B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170351BF610D0001F589B /* Player.cpp */; };
+		AC3170411BF89F72001F589B /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC31703F1BF89F72001F589B /* Item.cpp */; };
 		F951ED383789491BB0207035 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A6232444D1A41C9AE9D7AB8 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,9 @@
 		AC3170361BF610D0001F589B /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Player.hpp; path = ../src/Player.hpp; sourceTree = "<group>"; };
 		AC3170391BF6117C001F589B /* WindowSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WindowSize.hpp; path = ../src/WindowSize.hpp; sourceTree = "<group>"; };
 		AC31703D1BF619BE001F589B /* CellSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CellSize.hpp; path = ../src/CellSize.hpp; sourceTree = "<group>"; };
+		AC31703F1BF89F72001F589B /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Item.cpp; path = ../src/Item.cpp; sourceTree = "<group>"; };
+		AC3170401BF89F72001F589B /* Item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Item.hpp; path = ../src/Item.hpp; sourceTree = "<group>"; };
+		AC3170431BF8AE44001F589B /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Map.hpp; path = ../src/Map.hpp; sourceTree = "<group>"; };
 		C4FE7C93B0284804ABC67E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB52C5C237A8479E8C021814 /* Snake_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Snake_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,9 @@
 				AC3170361BF610D0001F589B /* Player.hpp */,
 				AC3170391BF6117C001F589B /* WindowSize.hpp */,
 				AC31703D1BF619BE001F589B /* CellSize.hpp */,
+				AC31703F1BF89F72001F589B /* Item.cpp */,
+				AC3170401BF89F72001F589B /* Item.hpp */,
+				AC3170431BF8AE44001F589B /* Map.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 				09EE1B43B153406496B91712 /* SnakeApp.cpp in Sources */,
 				AC3170341BF60F75001F589B /* Game.cpp in Sources */,
 				AC3170371BF610D0001F589B /* Player.cpp in Sources */,
+				AC3170411BF89F72001F589B /* Item.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,7 @@
 #include "WindowSize.hpp"
 #include "CellSize.hpp"
 #include "cinder/Vector.h"
+#include "Map.hpp"
 
 
 enum Direction {
@@ -21,6 +22,8 @@ private:
   
   ci::Vec2i size;
   ci::Vec2i offset;
+  
+  bool is_eatMyBody;
   
   struct Body {
     ci::Vec2i pos;
@@ -42,7 +45,12 @@ public:
   void setHeadDirection(const Direction& dir);
   const bool isConfiguredDirection() const;
   const Direction& getHeadDirection() const;
+  const ci::Vec2i& getHeadPosition() const;
   
-  void update();
+  const bool isEatMyBody() const;
+  
+  void eat();
+  
+  void update(Map& map);
   void draw();
 };

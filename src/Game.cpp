@@ -4,7 +4,11 @@
 
 
 Game::Game(int fps) :
-fps(fps) {}
+fps(fps),
+isGameOver(false)
+{
+  font = ci::Font(ci::app::loadAsset("player1up.ttf"), 50);
+}
 
 
 void Game::updateHeadDirection() {
@@ -23,17 +27,38 @@ void Game::updateHeadDirection() {
 }
 
 void Game::update() {
+  if (isGameOver) return;
+  
+  if (item.isEaten()) {
+    item.spawn(map);
+  }
+  
   if (!player.isConfiguredDirection()) {
     updateHeadDirection();
   }
+  
+  if (player.isEatMyBody()) {
+    isGameOver = true;
+  }
+  
   static int Fps = 0;
   Fps++;
   if (Fps > fps) {
-    player.update();
+    player.update(map);
+    if (player.getHeadPosition() == item.getPos()) {
+      player.eat();
+      item.setState(true);
+    }
     Fps = 0;
   }
 }
 
 void Game::draw() {
   player.draw();
+  item.draw();
+  
+  if (!isGameOver) return;
+  ci::gl::enableAlphaBlending();
+  ci::gl::drawStringCentered("~Game Over~", ci::app::getWindowCenter(), ci::Color(1, 1, 1), font);
+  ci::gl::disableAlphaBlending();
 }
