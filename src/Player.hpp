@@ -5,6 +5,8 @@
 #include "CellSize.hpp"
 #include "cinder/Vector.h"
 #include "Map.hpp"
+#include "cinder/Timeline.h"
+#include "cinder/Tween.h"
 
 
 enum Direction {
@@ -26,10 +28,15 @@ private:
   bool is_eatMyBody;
   
   struct Body {
+    ci::Anim<ci::Vec2i> anim;
     ci::Vec2i pos;
     Direction dir;
+    ci::ColorA color;
+    float alpha;
     Body(const ci::Vec2i& pos,
-         const Direction& dir);
+         const Direction& dir,
+         const float alpha,
+         const ci::ColorA& color);
   };
   std::vector<Body> bodies;
   
@@ -48,6 +55,9 @@ public:
   const ci::Vec2i& getHeadPosition() const;
   
   const bool isEatMyBody() const;
+  
+  void dead();
+  void deadUpdate();
   
   void eat();
   

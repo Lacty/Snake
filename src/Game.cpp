@@ -27,8 +27,6 @@ void Game::updateHeadDirection() {
 }
 
 void Game::update() {
-  if (isGameOver) return;
-  
   if (item.isEaten()) {
     item.spawn(map);
   }
@@ -37,7 +35,14 @@ void Game::update() {
     updateHeadDirection();
   }
   
+  if (isGameOver) {
+    player.deadUpdate();
+  }
+  
+  if (isGameOver) return;
+  
   if (player.isEatMyBody()) {
+    player.dead();
     isGameOver = true;
   }
   

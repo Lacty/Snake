@@ -7,9 +7,12 @@
 
 
 Item::Item() :
-is_eaten(false),
+is_eaten(true),
 size(Width / Row, Height / Column),
-offset(size / 2) {}
+offset(size / 2)
+{
+  ci::Rand::randomize();
+}
 
 void Item::spawn(Map& map) {
   while (is_eaten) {

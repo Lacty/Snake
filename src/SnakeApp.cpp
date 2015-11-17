@@ -21,7 +21,6 @@ public:
   void setup();
   
   void prepareSettings(Settings* settings) {
-    // １秒あたりの画面更新回数制限を禁止する
     settings->disableFrameRate();
   }
   
