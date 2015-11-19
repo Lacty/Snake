@@ -10,4 +10,5 @@ dependencies: /Users/yanai/Desktop/CinderProj/Snake/src/SnakeApp.cpp \
   ../../cinder_0.8.6_mac/include/cinder/TimelineItem.h \
   ../../cinder_0.8.6_mac/include/cinder/Easing.h \
   ../../cinder_0.8.6_mac/include/cinder/Tween.h \
-  /Users/yanai/Desktop/CinderProj/Snake/src/Item.hpp
+  /Users/yanai/Desktop/CinderProj/Snake/src/Item.hpp \
+  /Users/yanai/Desktop/CinderProj/Snake/src/Score.hpp

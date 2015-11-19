@@ -111,7 +111,7 @@ void Player::dead() {
     std::cout << "body.pos = " << body.pos << std::endl;
     end = ci::Vec2i(ci::randInt(0, Row), ci::randInt(0, Column));
     ci::app::timeline().apply(&body.anim, end.value(),
-                              0.6f, ci::easeInOutCirc);
+                              1.0f, ci::easeInOutCirc);
   }
 }
 
@@ -121,7 +121,7 @@ void Player::deadUpdate() {
     body.pos = body.anim;
     std::cout << "body.anim = " << body.anim << std::endl;
     std::cout << "body.pos = " << body.pos << std::endl;
-    body.alpha -= 0.018f;
+    body.alpha -= 0.02f;
   }
 }
 

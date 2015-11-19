@@ -16,6 +16,7 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AC2D06201BFDB2D400E19EC6 /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D061E1BFDB2D400E19EC6 /* Score.cpp */; };
 		AC3170311BF6045C001F589B /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC31702F1BF6045C001F589B /* Input.cpp */; };
 		AC3170341BF60F75001F589B /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170321BF60F75001F589B /* Game.cpp */; };
 		AC3170371BF610D0001F589B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170351BF610D0001F589B /* Player.cpp */; };
@@ -38,6 +39,8 @@
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		57AB9563CD24423E8A58BD34 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2D061E1BFDB2D400E19EC6 /* Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Score.cpp; path = ../src/Score.cpp; sourceTree = "<group>"; };
+		AC2D061F1BFDB2D400E19EC6 /* Score.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Score.hpp; path = ../src/Score.hpp; sourceTree = "<group>"; };
 		AC31702F1BF6045C001F589B /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = ../src/Input.cpp; sourceTree = "<group>"; };
 		AC3170301BF6045C001F589B /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Input.hpp; path = ../src/Input.hpp; sourceTree = "<group>"; };
 		AC3170321BF60F75001F589B /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../src/Game.cpp; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				AC31703F1BF89F72001F589B /* Item.cpp */,
 				AC3170401BF89F72001F589B /* Item.hpp */,
 				AC3170431BF8AE44001F589B /* Map.hpp */,
+				AC2D061E1BFDB2D400E19EC6 /* Score.cpp */,
+				AC2D061F1BFDB2D400E19EC6 /* Score.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2D06201BFDB2D400E19EC6 /* Score.cpp in Sources */,
 				AC3170311BF6045C001F589B /* Input.cpp in Sources */,
 				09EE1B43B153406496B91712 /* SnakeApp.cpp in Sources */,
 				AC3170341BF60F75001F589B /* Game.cpp in Sources */,

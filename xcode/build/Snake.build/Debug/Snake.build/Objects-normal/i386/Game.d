@@ -10,4 +10,5 @@ dependencies: /Users/yanai/Desktop/CinderProj/Snake/src/Game.cpp \
   ../../cinder_0.8.6_mac/include/cinder/Tween.h \
   /Users/yanai/Desktop/CinderProj/Snake/src/Item.hpp \
   ../../cinder_0.8.6_mac/include/cinder/app/AppNative.h \
+  /Users/yanai/Desktop/CinderProj/Snake/src/Score.hpp \
   /Users/yanai/Desktop/CinderProj/Snake/src/Input.hpp

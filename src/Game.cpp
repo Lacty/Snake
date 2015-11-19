@@ -5,6 +5,7 @@
 
 Game::Game(int fps) :
 fps(fps),
+score(0),
 isGameOver(false)
 {
   font = ci::Font(ci::app::loadAsset("player1up.ttf"), 50);
@@ -51,6 +52,7 @@ void Game::update() {
   if (Fps > fps) {
     player.update(map);
     if (player.getHeadPosition() == item.getPos()) {
+      score.addScore();
       player.eat();
       item.setState(true);
     }
@@ -66,4 +68,5 @@ void Game::draw() {
   ci::gl::enableAlphaBlending();
   ci::gl::drawStringCentered("~Game Over~", ci::app::getWindowCenter(), ci::Color(1, 1, 1), font);
   ci::gl::disableAlphaBlending();
+  score.draw();
 }
