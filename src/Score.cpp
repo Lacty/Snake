@@ -20,6 +20,7 @@ void Score::addScore() {
 void Score::draw() {
   std::ostringstream otr;
   otr << "Eat : " << mScore;
+  
   ci::gl::pushModelView();
   ci::gl::enableAlphaBlending();
   ci::gl::translate(pos);

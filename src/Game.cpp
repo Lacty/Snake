@@ -38,6 +38,11 @@ void Game::update() {
   
   if (isGameOver) {
     player.deadUpdate();
+    if (Input::get().isPush('r')) {
+      item = Item();
+      player = Player();
+      isGameOver = false;
+    }
   }
   
   if (isGameOver) return;
@@ -65,8 +70,12 @@ void Game::draw() {
   item.draw();
   
   if (!isGameOver) return;
+  ci::Vec2i pos = ci::Vec2i(ci::app::getWindowCenter().x, 200);
+  ci::gl::pushModelView();
   ci::gl::enableAlphaBlending();
-  ci::gl::drawStringCentered("~Game Over~", ci::app::getWindowCenter(), ci::Color(1, 1, 1), font);
+  ci::gl::translate(pos);
+  ci::gl::drawStringCentered("~Game Over~", ci::Vec2i::zero(), ci::Color(1, 1, 1), font);
   ci::gl::disableAlphaBlending();
+  ci::gl::popModelView();
   score.draw();
 }
